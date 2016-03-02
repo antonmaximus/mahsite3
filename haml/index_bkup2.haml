@@ -1,0 +1,25 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title Anton
+    %link(rel="stylesheet" href="./css/normalize.css")
+    %link(rel="stylesheet" href="./css/mainstyle.css" type="text/css")
+
+  %body
+    %header
+      %nav
+        %a(href="./index.html" id="emblem" ) Anton
+        %a(href="./portfolio.html") Portfolio
+        %a(href="http://blog.anton23.com/" target='_blank') Blog
+    .content
+      #spiel
+        %h2(id="infoTitle")Anton Agana
+        %h2(id="infoCategory") Los Angeles, CA
+        %p(id="infoText" class="infoText") Technical. Visual. I code and I make pretty things. I've completed work in the Visual Effects industry for Lucasfilm and EA Sports, and now doing web technology work in front-end and design. I enjoy warm weather, sports, lifehack, Psychology, and learning new things.
+        %p(class="infoText" id="contact") Need to reach me?  Email at myemail.  
+      #photo
+    %footer
+    :javascript
+      var x = "\<a href=\'mail" + "to" + ":anton" + (24-1)+ "\u0040g" + "mai" +"l\u002Ecom\'\>" + "anton" + (24-1)+ "\u0040g" + "mai" +"l\u002Ecom" + "\<\/a\>";  
+      document.getElementById("contact").innerHTML = "Need to reach me?  Email at " + x;

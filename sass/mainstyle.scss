@@ -1,0 +1,460 @@
+$font-stack: "ProximaNova-Regular",sans-serif;
+$textColor: #101010;
+$bgColor: #FAFAFA;
+
+body {
+	background-color: $bgColor;
+	font-family: $font-stack; 
+	color: $textColor; 
+
+	a {
+		font-family: "ProximaNova-Regular", sans-serif;
+		color: $textColor;	
+		border-bottom: 1px dashed red; 
+		text-decoration: none; 
+		-moz-transition: border-bottom 2s cubic-bezier(0.05, 0.95, 0.05, 0.95);
+		-webkit-transition: border-bottom 2s cubic-bezier(0.05, 0.95, 0.05, 0.95);
+		transition: border-bottom 2s cubic-bezier(0.05, 0.95, 0.05, 0.95);
+		&:hover {
+				border-bottom: 1px solid $bgColor; 
+			}
+	}
+
+	.title {
+		padding-bottom: 0.5em;
+		letter-spacing: 0.15em;
+	}
+	.category {
+		color: #999;
+		padding-bottom: 2em;
+		letter-spacing: 0.2em;
+	}
+	p {
+		margin-top: 0; 
+		padding-right: 15%;
+	}
+
+	h1, h2, h3, h4, h5 {
+		font-family: "futura-pt", sans-serif;
+		font-weight: 700;
+		font-size: 1em;
+		margin: 0;
+		text-transform: uppercase;
+	}
+}
+
+header {
+	padding: 0; 
+	background: rgba(105, 105, 105, 0.8); 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 110;
+
+	nav {
+		list-style: none; 
+		padding-left: 0; 
+		margin: 0; 
+
+		#emblem {
+			display: inline-block; 
+			color: $bgColor;
+			background-color: $textColor; 
+			padding-left: 1.5em;
+			padding-right: 1.5em;  
+			&:hover {
+				color: rgb(105, 105, 105);
+			}
+		}
+
+		a {
+			border: 0; 
+			font-family: "futura-pt", sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			letter-spacing: 0.06	em;
+			text-transform: uppercase;
+			color: $bgColor; 
+			text-align: center; 
+			text-decoration: none;
+			line-height: 1.5; 
+			display: inline-block;  	
+			padding: 13px 1em; 
+			&:hover {
+				color: $textColor; 
+				border: 0;
+			}	
+		}
+
+	}
+}
+
+
+#photo {
+	background: url(../img/akoWhole.jpg) no-repeat 0px 0px; 
+	background-size: 100%; 
+	display: inline-block; 
+	width: 350px;
+	height: 525px; 
+	/* 
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	*/
+}
+
+#spiel {
+	vertical-align: top; 
+	padding-left: 1%;
+	display: inline-block; 
+	width: 55%; 
+}
+
+#links {
+	margin-top: 10%; 
+
+	.category {
+		padding-bottom: 0.4em; 
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			margin-bottom: 0.4em; 
+		}
+	}
+}
+
+
+.content {
+	padding: 90px 10px 0 10px; 
+	margin: 0; 
+	#showcase, #info { 
+		display: inline-block; 
+		margin:0;
+		padding:0; 
+	}
+	#showcase {
+		width: 55%;
+	}
+	#info {
+		width: 42%;
+		vertical-align: top; 
+		font-size: 0.9375em;
+		line-height: 1.5em;
+		padding-left: 1%; 
+	}
+}
+
+
+
+//Animation states
+$finalSize:  auto 180%;
+$initialSize: auto 100%;
+
+#otherwork {
+	margin-top: 25px; 
+	.other{
+		margin-top: 5px; 
+		width: 230px;
+		height: 130px; 
+		display: inline-block;
+
+		cursor: pointer; 
+		background: no-repeat center;
+		background-size: $initialSize;
+		-moz-transition: background-size 1.0s cubic-bezier(0.05, 0.95, 0.05, 0.95);
+		transition: background-size 1.0s cubic-bezier(0.05, 0.95, 0.05, 0.95);
+		&:hover {
+			-moz-background-size: $finalSize; 
+			background-size: $finalSize; 
+		}
+	}
+	.selected {
+		cursor: default; 
+		opacity: 0.4; 
+		&:hover {
+			background-size: $initialSize; 			
+		}
+	}
+
+	#project1 {
+		background-image: url(../img/snapshotSmall_beardie.jpg);
+	}
+	#project2 {
+		background-image: url(../img/snapshotSmall_fufu.jpg);
+	}
+	#project3 {
+		background-image: url(../img/snapshotSmall_rex.jpg) 
+	}
+	#project4 {
+		background-image: url(../img/snapshotSmall_jello.jpg) 
+	}
+
+	span {
+		display: inline-block; 
+		background: rgba(105, 105, 105, 0.8); 
+		padding: 2% 2% 2% 4%; 
+		font-style: italic; 
+		color: $bgColor;
+		font-size: 0.8em; 
+		text-transform: uppercase;	
+		position: relative;
+		top: 70%;
+	}
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+
+#carouselHolder {
+	display: none;
+}
+.carousel{
+    overflow:hidden;
+    width:100%;
+}
+
+.animated {
+
+    -moz-animation: carousel 30s infinite;
+    -webkit-animation: carousel 30s infinite;
+    animation: carousel 30s infinite;
+}
+
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+#panes {
+	margin: 0;
+	padding: 0; 
+    list-style:none;
+    position:relative;
+    width:500%; /* Number of panes * 100% */
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+}
+#panes > li{
+            text-align: center; 
+    position:relative;
+    float:left;
+    width:20%; /* 100 / number of panes */
+}
+.carousel img{
+        display: inline-block; 
+        max-height:100%;
+        max-width: 100%;
+        z-index: 0; 
+}
+.carousel h2{
+    font-size:0.9em;
+    padding:0.5em;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    left:10px;
+    text-align:right;
+    font-family: "ProximaNova-Regular", sans-serif;
+    color: #FAFAFA;  
+    text-transform: uppercase;
+    background-color:rgba(0,0,0,0.75);
+}
+
+
+#button {
+    opacity: 0;
+    z-index: 100;
+    height: inherit; 
+    width: inherit;
+    background: url("../img/pause450px.png") no-repeat center; 
+    background-size: contain;
+
+    position:absolute;
+
+}
+#button:hover {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+@-moz-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@-webkit-keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+
+
+/*------------------------------------*\
+    $PORTFOLIO
+\*------------------------------------*/
+@media screen and (max-width:960px) {
+	#otherwork {
+		margin-top: 25px; 
+		.other{
+			width: 159px;
+			height: 90px; 
+		}
+	}	
+}
+
+@media screen and (max-width:860px) {
+	.content {
+		#showcase {
+			width: 100%; 
+		}
+		#info {
+			display: block;
+			padding-left: 0; 
+			width: 100%; 
+		}
+
+		#infoTitle {
+			padding-bottom: 0; 
+		}
+		#infoCategory {
+			padding-bottom: 0; 
+		}
+		#infoText {
+			display: none; 
+		}
+
+	}
+}
+
+@media screen and (max-width:670px)  {
+	header {
+		nav {
+			a {
+				padding: 10px 0.9em; 
+				font-size: 0.95em; 
+			}
+		}
+	}
+	.content {
+		padding: 50px 1% 0 1%; 
+
+		h1, h2, h3, h4, h5  {
+			font-size: 0.95em; 
+		}
+	}
+	#otherwork {
+		.other{
+			width: 124px;
+			height: 70px; 
+		}
+		span {
+			font-size: 0.75em; 
+		}
+	}	
+}
+
+
+@media screen and (max-width:528px) {
+	#otherwork {
+		#project1, #project2, #project3, #project4 {
+			background-image: none; 
+			height: auto;
+			width: 100%; 
+			display: block; 
+
+			span {
+				display: block; 
+				padding: 3% 2%;
+				font-size: 0.9em; 
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------*\
+    $ABOUT
+\*------------------------------------*/
+@media screen and (max-width:824px) {
+	#photo {
+		background-image: url(../img/akoFace.jpg);
+		width: 200px;
+		height: 200px;
+	}
+
+}
+
+
+@media screen and (max-width:566px) {
+	#firstP {
+		display: none; 
+	}
+
+}
+
+

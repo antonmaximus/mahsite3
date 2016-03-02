@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Anton about</title>
+    <link href='../css/carousel.css' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class='carousel'>
+      <img id="button" src="../img/pause450px.png">
+      <ul id ='panes' class="animated">
+        <li>
+          <h2>Fufu (1 of 5)</h2>
+          <img id="img1"alt='' src='../img/carousel/450_fufu.jpg'>
+        </li>
+        <li>
+          <h2>Savage Oppress (2 of 5)</h2>
+          <img id="img2" alt='' src='../img/carousel/450_savageOppress.jpg'>
+        </li>
+        <li>
+          <h2>Storm Troopers (3 of 5)</h2>
+          <img id="img3" alt='' src='../img/carousel/450_killerSuperAceHighFive.jpg'>
+        </li>
+        <li>
+          <h2>Nite Owl (4 of 5)</h2>
+          <img id="img4" alt='' src='../img/carousel/450_deathWatchNiteOwl.jpg'>
+        </li>
+        <li>
+          <h2>Bob (5 of 5)</h2>
+          <img id="img5" alt='' src='../img/carousel/450_bob.jpg'>
+        </li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      function imgClicked() {
+        var currentState = document.getElementById("panes").className; 
+        if (currentState == "animated"){
+          document.getElementById("panes").className += " paused";
+          document.getElementById("button").src = "../img/play450px.png";
+        } 
+        else {
+          document.getElementById("panes").className = "animated";
+          document.getElementById("button").src = "../img/pause450px.png";
+        }
+
+      }
+      document.getElementById("button").addEventListener("click", imgClicked, false);
+
+    </script>
+  </body>
+</html>

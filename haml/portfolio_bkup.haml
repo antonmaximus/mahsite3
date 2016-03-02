@@ -1,0 +1,38 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title Anton
+    %link(rel="stylesheet" href="./css/normalize.css")
+    %link(rel="stylesheet" href="./css/mainstyle.css" type="text/css")
+
+  %body
+    %header
+      %nav
+        %a(href="./index.html" id="emblem") Anton
+        %a(href="./portfolio.html") Portfolio
+        %a(href="http://blog.anton23.com/" target='_blank') Blog
+    .content
+      #showcase
+      
+        %iframe(id="videoIframe" src="" frameborder="0"  allowfullscreen)
+      #info
+        %h2(id="infoTitle")
+        %h2(id="infoCategory")
+        %p(id="infoText" class="infoText")
+      #otherwork
+        .other
+          #project1(class="selected")
+            %span Bearded Dragon
+        .other
+          #project2
+            %span 2D Images
+        .other
+          #project3
+            %span CG Animation
+        .other
+          #project4
+            %span Programming
+
+    %footer
+    %script(src="./white.js")

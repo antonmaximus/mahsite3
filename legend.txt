@@ -1,0 +1,4 @@
+legend:
+
+bkup 1: Paginated site.  Portfolio uses iframe for 2D images.
+bkup 2: Paginated site.  Portfolio has 2D images in its code.

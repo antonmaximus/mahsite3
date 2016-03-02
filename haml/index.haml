@@ -1,0 +1,33 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title Anton
+    %link(rel="stylesheet" href="./css/normalize.css")
+    %link(rel="stylesheet" href="./css/mainstyle.css" type="text/css")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  %body
+    %header
+      %nav
+        %a(href="./index.html" id="emblem" ) Anton
+        %a(href="./portfolio.html") Portfolio
+        %a(href="http://blog.anton23.com/" target='_blank') Blog
+    .content
+      #spiel
+        #about
+          %h2(class="title")Anton Agana
+          %h2(class="category") Los Angeles, CA
+          %p(id="firstP") Technical. Visual. I code and I make pretty things. I've completed work in the Visual Effects industry for Lucasfilm and EA Sports, and now doing web technology work. I enjoy warm weather, being active, lifehack, Psychology, technology, and honey.
+          %p(id="contact") 
+        #links
+          %h2(class="category") Links
+          %ul
+            %li <a href="http://www.linkedin.com/in/anton23" alt="" title="" target="_blank">LinkedIn</a>
+            %li <a href="http://www.imdb.com/name/nm5641463/" alt="" title="" target="_blank">IMDB</a> 
+
+      #photo
+    %footer
+    :javascript
+      var x = "\<a href=\'mail" + "to" + ":anton" + (24-1)+ "\u0040g" + "mai" +"l\u002Ecom\'\>" + "anton" + (24-1)+ "\u0040g" + "mai" +"l\u002Ecom" + "\<\/a\>";  
+      document.getElementById("contact").innerHTML = "Need to reach me?  Email " + x;

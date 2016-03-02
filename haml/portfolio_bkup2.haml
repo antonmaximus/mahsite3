@@ -1,0 +1,57 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title Anton
+    %link(rel="stylesheet" href="./css/normalize.css")
+    %link(rel="stylesheet" href="./css/mainstyle.css" type="text/css")
+
+  %body
+    %header
+      %nav
+        %a(href="./index.html" id="emblem") Anton
+        %a(href="./portfolio.html") Portfolio
+        %a(href="http://blog.anton23.com/" target='_blank') Blog
+    .content
+      #showcase
+        #carouselHolder
+          %div(id="button")  
+          .carousel
+            %ul(id ='panes' class="animated")
+              %li
+                %h2 Fufu (1 of 5)
+                %img(id="img1"alt='' src='./img/carousel/450_fufu.jpg')
+              %li 
+                %h2 Savage Oppress (2 of 5)
+                %img(id="img2" alt='' src='./img/carousel/450_savageOppress.jpg')
+              %li
+                %h2 Storm Troopers (3 of 5)
+                %img(id="img3" alt='' src='./img/carousel/450_killerSuperAceHighFive.jpg')
+              %li
+                %h2 Nite Owl (4 of 5)
+                %img(id="img4" alt='' src='./img/carousel/450_deathWatchNiteOwl.jpg')
+              %li 
+                %h2 Bob (5 of 5)
+                %img(id="img5" alt='' src='./img/carousel/450_bob.jpg')
+
+        %iframe(id="videoIframe" src="" frameborder="0"  allowfullscreen)
+      #info
+        %h2(id="infoTitle")
+        %h2(id="infoCategory")
+        %p(id="infoText" class="infoText")
+      #otherwork
+        .other
+          #project1(class="selected")
+            %span Bearded Dragon
+        .other
+          #project2
+            %span 2D Images
+        .other
+          #project3
+            %span CG Animation
+        .other
+          #project4
+            %span Programming
+
+    %footer
+    %script(src="./white.js")
